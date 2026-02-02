@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Message 💜</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1><i class="fas fa-search-heart"></i> A Scavenger Hunt for You</h1>
+            <p class="subtitle">Find the 5 hidden items to reveal my message...</p>
+            <div class="counter">Found: <span id="foundCount">0</span>/5</div>
+        </header>
+
+        <!-- Clickable Hidden Items -->
+        <div class="hunt-area">
+            <div class="item" data-id="1">
+                <i class="fas fa-key"></i>
+                <div class="hint">Click me</div>
+            </div>
+            <div class="item" data-id="2">
+                <i class="fas fa-heart"></i>
+                <div class="hint">Click me</div>
+            </div>
+            <div class="item" data-id="3">
+                <i class="fas fa-star"></i>
+                <div class="hint">Click me</div>
+            </div>
+            <div class="item" data-id="4">
+                <i class="fas fa-gem"></i>
+                <div class="hint">Click me</div>
+            </div>
+            <div class="item" data-id="5">
+                <i class="fas fa-music"></i>
+                <div class="hint">Click me</div>
+            </div>
+        </div>
+
+        <!-- Revealed Message Parts -->
+        <div class="message-board">
+            <h2><i class="fas fa-scroll"></i> Message Fragments</h2>
+            <div class="fragments">
+                <div class="fragment" data-fragment="1">Every moment with you...</div>
+                <div class="fragment" data-fragment="2">...feels like a special treasure.</div>
+                <div class="fragment" data-fragment="3">You have a way of making ordinary days...</div>
+                <div class="fragment" data-fragment="4">...shine brighter than stars.</div>
+                <div class="fragment" data-fragment="5">This song captures what I can't fully put into words.</div>
+            </div>
+        </div>
+
+        <!-- Final Reveal (Hidden Initially) -->
+        <div id="finalReveal" class="final-reveal">
+            <h2><i class="fas fa-gift"></i> For You, My Treasure</h2>
+            <div class="full-message">
+                <p>Every moment with you feels like a special treasure. You have a way of making ordinary days shine brighter than stars.</p>
+                <p>This song captures what I can't fully put into words. Thank you for being you. 💜</p>
+            </div>
+            
+            <div class="music-player">
+                <h3><i class="fas fa-music"></i> Our Song</h3>
+                <!-- REPLACE THIS EMBED WITH YOUR SPOTIFY LINK -->
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4PTG3Z6ehGkBFwjybzWkR8?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <p class="hint">This made me think of you</p>
+            </div>
+            
+            <div class="actions">
+                <button id="replayBtn"><i class="fas fa-redo"></i> Experience Again</button>
+            </div>
+        </div>
+
+        <!-- Confetti Canvas -->
+        <canvas id="confettiCanvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
